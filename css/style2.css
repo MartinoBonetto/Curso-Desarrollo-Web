@@ -1,111 +1,284 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 /*---------RESET----------*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
-body{
+body {
     align-items: center;
     font-family: "Oswald", sans-serif;
 }
 
 /*---------HEADER UNIVERSAL----------*/
 
-header{
+header {
+    padding: 80px 0;
     background-color: blue;
-    display: flexbox;
 }
 
-.cabecera{
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
 }
 
-.cabecera .Logo{
+.logo img {
     width: 150px;
     height: 150px;
-    margin-left: 20px;
 }
 
-.cabecera a{
-    text-decoration: none;
+.name{
+    transform: translateX(160px);
+    position: absolute;
 }
 
-.cabecera h1{
-    margin-top: 50px;
-    color: black;
-}
-
-.cabecera input{
-    width: 600px;
-    height: 45px;
-    margin-top: 50px;
-    margin-left: 20px;
-}
-
-.cabecera .lupa{
-    position: relative;
-    width: 30px;
-    height: 30px;
-    margin-top: 50px;
-}
-
-.cabecera button{
-    width: 150px;
-    height: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    margin-top: 50px;
-    margin-left: 50px;
-}
-
-.cabecera .carrito{
-    width: 30px;
-    height: 30px;
-    margin-top: 50px;
-}
-
-nav ul{
+.menu .navbar ul{
     display: flex;
-    height: 50px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    background-color: black;
 }
 
-nav li a{
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 10px;
+    color: black;
+    display: block;
     text-decoration: none;
-    color: white;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 30px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 990px){
+    header {
+        padding: 80px 0;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+    .name{
+        transform: translateX(100px);
+        position: absolute;
+    }
+    .menu label{
+        display: initial;
+    }
+    .menu .navbar{
+        position: absolute;    
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: blue;
+        display: none;
+
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+@media (max-width:550px){
+    .menu .navbar ul li a {
+        font-size: 15px;
+        padding: 9px;
+    }
+}
+
+/*---------BANNER CARUSEL----------*/
+
+.slide {
+    width: 1500px;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slider 20s infinite alternate ease-in-out;
+    animation-timing-function: linear;
+}
+
+.slide li {
+    list-style: none;
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 75%;
+}
+
+@keyframes slider {
+    0% {
+        margin-left: 0;
+    }
+
+    20% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+
+}
+
+@media (Max-width: 1550px) {
+    .slide {
+        width: 1400px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 1430px) {
+    .slide {
+        width: 1300px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 1330px) {
+    .slide {
+        width: 1200px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 1225px) {
+    .slide {
+        width: 1100px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .slide {
+        width: 1000px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .slide {
+        width: 900px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 930px) {
+    .slide {
+        width: 800px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 830px) {
+    .slide {
+        width: 700px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 720px) {
+    .slide {
+        width: 600px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 620px) {
+    .slide {
+        width: 500px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 520px) {
+    .slide {
+        width: 400px;
+        height: 150px;
+    }
 }
 
 /*---------TITULO PRODUCTOS DESTACADOS----------*/
 
-.titulo h2{
+.titulo h2 {
     padding-top: 30px;
     margin-left: 40px;
 }
 
-.titulo hr{
-    width: 1845px;
+.titulo hr {
+    display: flex;
+    width: auto;
     height: 2px;
     margin-left: 30px;
     background-color: black;
 }
 
+
 /*---------TARJETAS PRODUCTOS DESTACADOS----------*/
 
-.contenedor-tarjeta{
+.contenedor-tarjeta {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
 }
 
-.tarjeta{
+.tarjeta {
     width: 325px;
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -114,27 +287,27 @@ nav li a{
     margin: 20px;
 }
 
-.tarjeta img{
+.tarjeta img {
     width: 100%;
     height: auto;
 }
 
-.contenido-tarjeta{
+.contenido-tarjeta {
     padding: 16px;
 }
 
-.contenido-tarjeta h3{
+.contenido-tarjeta h3 {
     font-size: 28px;
     margin-bottom: 8px;
 }
 
-.contenido-tarjeta p{
+.contenido-tarjeta p {
     color: black;
     font-size: 15px;
     line-height: 1.3;
 }
 
-.contenido-tarjeta .btn{
+.contenido-tarjeta .btn {
     display: inline-block;
     padding: 8px 16px;
     background-color: gray;
@@ -148,102 +321,135 @@ nav li a{
 
 /*---------BANNER DE MARCAS----------*/
 
-.carrusel{
+.carrusel {
     margin-top: 50px;
     overflow: hidden;
     padding: 60px 0;
     white-space: nowrap;
 }
 
-.carrusel-animation{
+.carrusel-animation {
     display: inline-block;
     animation: animacion 30s infinite linear;
 }
 
-.carrusel-animation img{
+.carrusel-animation img {
     height: 90px;
     margin: 0 40px;
 }
 
-@keyframes animacion{
-    from{
+@keyframes animacion {
+    from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
-    
+
 }
+
 /*---------FOOTER UNIVERSAL----------*/
 
-footer{
+footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: blue;
 }
 
-footer div img{
+footer div img {
     width: 150px;
     height: 150px;
 }
 
-.boton button{
+.boton button {
     width: 150px;
     height: 30px;
 }
 
-.boton a{
+.boton a {
     text-decoration: none;
     color: black;
 }
 
-.redes h3{
+.redes h3 {
     text-decoration: underline;
 }
 
-.redes img{
+.redes img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
 }
 
-.contacto a{
+.contacto a {
     text-decoration: none;
 }
 
-.contacto h3{
+.contacto h3 {
     color: black;
+}
+
+@media (max-width:990px ){
+    footer div img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .boton button {
+        width: 100px;
+        height: 30px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    .redes img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
 }
 
 /*---------FIN DEL INDEX----------*/
 
 /*---------MARCAS----------*/
 
-.marcimg{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.grid-container {
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    border: solid 4px red;
+    margin: 5px;
+}
+
+.grid-item {
+    border: solid 4px blue;
+}
+
+.banner {
+    grid-column: 1/4;
     align-items: center;
 }
 
-.marcimg img{
-    margin: 10px;
-    width: 1500px;
-    height: 300px;
-}
+
+
+
 
 /*---------FIN DEL MARCAS----------*/
 
 /*---------PRODUCTOS----------*/
 
-.productimg h2{
+.productimg h2 {
     margin-left: 20px;
     color: white;
     transform: translate(0, 150px);
 }
 
-.productimg{
+.productimg {
     margin-top: -30px;
     margin-left: 350px;
 }
@@ -257,42 +463,42 @@ footer div img{
 
 /*---------AYUDA----------*/
 
-.contenedor-acordeon{
-    max-width: 700px;
+.contenedor-acordeon {
+    max-width: 1100px;
     margin: 0 auto;
     padding: 30px;
 }
 
-.contenedor-acordeon h1{
+.contenedor-acordeon h1 {
     margin-top: 3em;
     text-align: center;
     text-transform: uppercase;
     color: black;
 }
 
-.contenedor-acordeon input{
+.contenedor-acordeon input {
     display: none;
 }
 
 
-.contenedor-acordeon .tab{
+.contenedor-acordeon .tab {
     overflow: hidden;
 }
 
-.contenedor-acordeon .tab-contenido{
+.contenedor-acordeon .tab-contenido {
     max-height: 0;
     padding: 0 1em;
     transition: all 0.25s ease;
 }
 
-.contenedor-acordeon input:checked ~ .tab-contenido{
+.contenedor-acordeon input:checked~.tab-contenido {
     max-height: 100vh;
     padding: 1em;
     background: whitesmoke;
     color: black;
 }
 
-.contenedor-acordeon .tab-title{
+.contenedor-acordeon .tab-title {
     display: flex;
     padding: 1em;
     cursor: pointer;
@@ -301,36 +507,44 @@ footer div img{
     justify-content: space-between;
 }
 
-.contenedor-acordeon .tab-title:hover{
+.contenedor-acordeon .tab-title:hover {
     background: rgb(0, 0, 174);
 }
 
-.contenedor-acordeon .tab-title::after{
+.contenedor-acordeon .tab-title::after {
     content: ">";
     transition: all 0.25s ease;
 }
 
-.contenedor-acordeon input:checked + .tab-title::after{
+.contenedor-acordeon input:checked+.tab-title::after {
     transform: rotate(90deg);
+}
+
+.container {
+    border: solid 4px blue;
+}
+
+.col img {
+    height: 100px;
 }
 
 /*---------FIN AYUDA----------*/
 
 /*---------ARMADOR----------*/
 
-.img h2{
+.img h2 {
     margin-top: 70px;
     margin-left: 700px;
 }
 
-.img img{
+.img img {
     width: 300px;
     height: 300px;
     margin: 50px;
     transform: translate(700px, 20px);
 }
 
-.armador{
+.armador {
     width: 500px;
     height: 700px;
     margin-top: -450px;
@@ -339,6 +553,6 @@ footer div img{
     background-color: beige;
 }
 
-.armador h2{
+.armador h2 {
     margin-left: 180px;
 }
