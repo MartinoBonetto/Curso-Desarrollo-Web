@@ -1,0 +1,339 @@
+
+/*---------MEDIA HEADER UNIVERSAL----------*/
+@media (max-width: 990px){
+    header {
+        padding: 80px 0;
+        
+    }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    header .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;    
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: blue;
+        display: none;
+
+    }
+    .menu .navbar ul li{
+        width: 200%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+@media (max-width:550px){
+    .menu .navbar ul li a {
+        font-size: 15px;
+        padding: 9px;
+    }
+}
+
+@media(max-width:440px){
+    header{
+        padding: 120px 0;
+    }
+
+    .menu{
+        flex-direction: column;
+    } 
+
+    .menu .name{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/*---------FIN MEDIA HEADER UNIVERSAL----------*/
+
+
+/*---------MEDIA BANNER----------*/
+@media (Max-width: 1550px) {
+    .slide {
+        width: 1400px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 1430px) {
+    .slide {
+        width: 1300px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 1330px) {
+    .slide {
+        width: 1200px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 1225px) {
+    .slide {
+        width: 1100px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .slide {
+        width: 1000px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .slide {
+        width: 900px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 930px) {
+    .slide {
+        width: 800px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 830px) {
+    .slide {
+        width: 700px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 720px) {
+    .slide {
+        width: 600px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 620px) {
+    .slide {
+        width: 500px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 520px) {
+    .slide {
+        width: 400px;
+        height: 150px;
+    }
+}
+/*---------FIN MEDIA BANNER----------*/
+
+/*---------MEDIA FOOTER UNIVERSAL----------*/
+@media (max-width:990px ){
+    footer div img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .boton button {
+        width: 100px;
+        height: 30px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    .redes img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+}
+
+@media(max-width:720px){
+    footer .boton button {
+        width: 85px;
+        height: 30px;
+    }
+
+    footer .redes img {
+        width: 18px;
+        height: 18px;
+        margin-right: 5px;
+    }
+}
+
+@media(max-width:520px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*---------FIN MEDIA FOOTER UNIVERSAL----------*/
+
+/*---------MEDIA MARCAS----------*/
+
+@media (max-width:840px){
+    .marcas a img{
+        width: 700px;
+        height: 150px;
+        padding-top: 10px;
+    }
+}
+@media (max-width:720px){
+    .marcas a img{
+        width: 600px;
+        height: 130px;
+        padding-top: 10px;
+    }
+}
+@media(max-width:620px ){
+    .titulo-marca{
+        font-size: 40px;
+    }
+
+    .marcas a img{
+        width: 500px;
+        height: 110px;
+        padding-top: 10px;
+    }
+}
+@media(max-width:520px){
+    .marcas a img{
+        width: 400px;
+        height: 90px;
+        padding-top: 10px;
+    }
+}
+@media(max-width:420px){
+    .titulo-marca{
+        font-size: 30px;
+    }
+
+    .marcas a img{
+        width: 300px;
+        height: 70px;
+        padding-top: 10px;
+    }
+}
+/*---------FIN MEDIA MARCAS----------*/
+
+
+/*---------MEDIA PRODUCTOS----------*/
+
+@media(max-width:1600px){
+    .contenedor-related-products .card-list-products .card .card-img img{
+        width: 350px;
+        height: 310px;
+    }
+}
+
+@media(max-width:1525px){
+    .contenedor-related-products .card-list-products{
+        gap: 20px;
+    }
+    .contenedor-related-products .card-list-products .card .card-img img{
+        width: 330px;
+        height: 290px;
+    }
+}
+
+@media(max-width:1435px){
+    .contenedor-related-products .card-list-products{
+        gap: 15px;
+    }
+    .contenedor-related-products .card-list-products .card .card-img img{
+        width: 310px;
+        height: 270px;
+    }
+}
+
+@media(max-width:1350px){
+    .contenedor-related-products .card-list-products .card .card-img img{
+        width: 290px;
+        height: 250px;
+    }
+
+    .info-card{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:1280px){
+    .contenedor-related-products .card-list-products .card .card-img img{
+        width: 270px;
+        height: 230px;
+    }
+}
+
+@media(max-width:1160px){
+    .contenedor-related-products .card-list-products .card .card-img img{
+        width: 250px;
+        height: 210px;
+    }
+}
+
+@media(max-width:1080px){
+    .contenedor-related-products .card-list-products{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contenedor-related-products .card-list-products .card{
+        width: 300px;
+        height: 350px;
+        align-items: center;
+    }
+
+    .contenedor-related-products .card-list-products .card .card-img img{
+        width: 290px;
+        height: 260px;
+    }
+}
+
+@media(max-width:950px){
+    .contenedor-related-products .card-list-products{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .contenedor-related-products .card-list-products .card{
+        width: 300px;
+        height: 350px;
+        align-items: center;
+    }
+}
+
+@media(max-width:800px){
+    .product {
+        flex-direction: column;
+    }
+
+    .imagen{
+        width: 50%;
+    }
+}
+
+@media(max-width:640px){
+    .contenedor-related-products .card-list-products{
+        display: flex;
+        flex-direction: column;        
+        align-items: center;
+    }
+}
+/*---------FIN MEDIA PRODUCTOS----------*/
+
+/*---------MEDIA ARMADOR----------*/
+
+/*---------FIN MEDIA ARMADOR----------*/

@@ -4,18 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style2.css">
-    <title>DARKS GAMERS</title>
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <!--META DESCRIPCION-->
+    <meta name="description" content="
+    Descubre los mejores productos gamer: desde PCs y consolas hasta accesorios y periféricos. Encuentra lo último en tecnología para elevar tu experiencia de juego al máximo nivel.">
+    <!--META KEYWORDS-->
+    <meta name="keywords" content="Dark Gamers, Tecnologia, Juegos, Componentes, Computacion">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
+
+    <title>DARKS GAMERS | Tu tienda de tecnologia de confianza</title>
 </head>
 
 <body>
     <header>
         <div class="menu container">
-            <a href="#" class="logo"><img src="../img/Logo.jpg" alt=""></a>
+            <a href="#" class="logo"><img src="../img/Logo.jpg" alt="logo pagina"></a>
             <h1 class="name">DARKS GAMERS</h1>
             <input type="checkbox" id="menu">
             <label for="menu">
-                <img class="menu-icono" src="../img/imagen-menu.png" alt="">
+                <img class="menu-icono" src="../img/imagen-menu.png" alt="imagen del menu">
             </label>
             <nav class="navbar">
                 <ul>
@@ -29,26 +40,107 @@
         </div>
     </header>
 
-    <main>
-        <section class="img">
-            <h2>PROCESADOR</h2>
-            <img src="../img/amd-img.jpg" alt="">
-            <img src="../img/intel-img.jpg" alt="">
-        </section>
-
-        <section class="armador">
-            <h2>ARMADOR</h2>
-            <ul>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
-                <li><img src="" alt=""></li>
+    <main class="armadorX">
+        <form id="computer-builder">
+            <div class="form-section">
+                <fieldset>
+                    <legend>Procesador</legend>
+                    <label>
+                        <input type="radio" name="processor" value="Intel i5" required>
+                        Intel i5
+                    </label>
+                    <label>
+                        <input type="radio" name="processor" value="AMD Ryzen 5">
+                        AMD Ryzen 5
+                    </label>
+                    <label>
+                        <input type="radio" name="processor" value="Intel i7">
+                        Intel i7
+                    </label>
+                    <label>
+                        <input type="radio" name="processor" value="AMD Ryzen 7">
+                        AMD Ryzen 7
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form-section">
+                <fieldset>
+                    <legend>Placa Madre</legend>
+                    <label>
+                        <input type="radio" name="motherboard" value="ASUS ROG" required>
+                        ASUS ROG
+                    </label>
+                    <label>
+                        <input type="radio" name="motherboard" value="MSI B450">
+                        MSI B450
+                    </label>
+                    <label>
+                        <input type="radio" name="motherboard" value="Gigabyte Z490">
+                        Gigabyte Z490
+                    </label>
+                    <label>
+                        <input type="radio" name="motherboard" value="ASRock B550">
+                        ASRock B550
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form-section">
+                <fieldset>
+                    <legend>Memoria RAM</legend>
+                    <label>
+                        <input type="radio" name="ram" value="8GB" required>
+                        8GB
+                    </label>
+                    <label>
+                        <input type="radio" name="ram" value="16GB">
+                        16GB
+                    </label>
+                    <label>
+                        <input type="radio" name="ram" value="32GB">
+                        32GB
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form-section">
+                <fieldset>
+                    <legend>Disco Duro</legend>
+                    <label>
+                        <input type="radio" name="storage" value="SSD 256GB" required>
+                        SSD 256GB
+                    </label>
+                    <label>
+                        <input type="radio" name="storage" value="SSD 512GB">
+                        SSD 512GB
+                    </label>
+                    <label>
+                        <input type="radio" name="storage" value="HDD 1TB">
+                        HDD 1TB
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form-section">
+                <fieldset>
+                    <legend>Tarjeta Gráfica</legend>
+                    <label>
+                        <input type="radio" name="graphics" value="NVIDIA GTX 1660" required>
+                        NVIDIA GTX 1660
+                    </label>
+                    <label>
+                        <input type="radio" name="graphics" value="AMD RX 5700">
+                        AMD RX 5700
+                    </label>
+                    <label>
+                        <input type="radio" name="graphics" value="NVIDIA RTX 3060">
+                        NVIDIA RTX 3060
+                    </label>
+                </fieldset>
+            </div>
+            <button type="submit">Generar Configuración</button>
+        </form>
+        <section id="preview">
+            <h2>Vista Previa de la Configuración</h2>
+            <ul id="preview-list">
+                <!-- Aquí se mostrarán los componentes seleccionados -->
             </ul>
         </section>
     </main>
@@ -56,7 +148,7 @@
     <footer>
         <!--LOGO-->
         <div>
-            <img src="../img/Logo.jpg" alt="">
+            <img src="../img/Logo.jpg" alt="logo de la pagina">
         </div>
 
         <div class="boton">
@@ -72,11 +164,11 @@
         <div class="redes">
             <h3>REDES SOCIALES</h3>
             <!--REDES SOCIALES-->
-            <a href="#"><img src="../img/instagram.png" alt=""></a>
-            <a href="#"><img src="../img/youtube.png" alt=""></a>
-            <a href="#"><img src="../img/facebook.png" alt=""></a>
-            <a href="#"><img src="../img/logotipos.png" alt=""></a>
-            <a href="#"><img src="../img/logo.png" alt=""></a>
+            <a href="#"><img src="../img/instagram.png" alt="logo instagram"></a>
+            <a href="#"><img src="../img/youtube.png" alt="logo youtube"></a>
+            <a href="#"><img src="../img/facebook.png" alt="logo facebook"></a>
+            <a href="#"><img src="../img/logotipos.png" alt="logo twiter"></a>
+            <a href="#"><img src="../img/logo.png" alt="logo twitch"></a>
         </div>
 
         <div class="contacto">
@@ -86,6 +178,9 @@
             </a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
