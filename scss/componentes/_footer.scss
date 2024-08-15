@@ -2,7 +2,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: $color-principal;
+    background-color: nth($colores, 2);
 
     div img {
         width: 150px;

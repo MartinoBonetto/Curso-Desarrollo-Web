@@ -25,7 +25,7 @@
 
     }
     .menu .navbar ul li{
-        width: 200%;
+        width: 100%;
     }
 
     #menu:checked ~ .navbar{
@@ -50,6 +50,11 @@
     } 
 
     .menu .name{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu .navbar ul{
         display: flex;
         flex-direction: column;
     }
@@ -136,7 +141,33 @@
         height: 150px;
     }
 }
+
+@media (max-width: 420px) {
+    .slide {
+        width: 350px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 350px) {
+    .slide {
+        width: 300px;
+        height: 150px;
+    }
+}
 /*---------FIN MEDIA BANNER----------*/
+
+
+/*---------MEDIA H2 INDEX----------*/
+
+@media (max-width: 320px){
+    .titulo h2 {
+        font-size: 20px;
+    }
+}
+
+/*---------FIN MEDIA H2 INDEX----------*/
+
 
 /*---------MEDIA FOOTER UNIVERSAL----------*/
 @media (max-width:990px ){

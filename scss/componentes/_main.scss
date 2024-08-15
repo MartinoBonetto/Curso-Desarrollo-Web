@@ -29,6 +29,7 @@
 /*---------TITULO PRODUCTOS DESTACADOS----------*/
 .titulo {
     h2 {
+        display: flex;
         padding-top: 30px;
         margin-left: 40px;
     }
@@ -113,9 +114,7 @@
 /*---------MARCAS----------*/
 
 .titulo-marca {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex (flex, center, center);
     padding-top: 50px;
     font-size: 50px;
     text-decoration: underline;
